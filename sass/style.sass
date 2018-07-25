@@ -67,17 +67,6 @@ html
   font-style: normal
   font-display: swap
 
-.back
-	position: absolute
-	width: 100%
-	height: 5000px
-	opacity: 0.2	
-	top: 0
-	left: 0
-	background-image: url("../img/1.png")
-	background-repeat: no-repeat
-
-
 body
 	font-family: "Open-Sans", serif
 	font-size: 15px
@@ -85,57 +74,134 @@ body
 	background-color: #fff
 	margin: 0
 
+// .back
+// 	position: absolute
+// 	width: 100%
+// 	height: 5000px
+// 	opacity: 0.3	
+// 	top: 0
+// 	left: 0
+// 	background-image: url("../img/2.png")
+// 	background-repeat: no-repeat
+// 	background-size: contain
+
 .container
 	width: 1000px
 	padding: 
-		left: 65px
+		left: 50px
 	margin: 
 		left: auto
 		right: auto
 
 .main-header
-	min-height: 88px
-	background-color: red
+	padding: 
+		bottom: 20px
 	.container
 		display: flex
 		justify-content: space-between
 		
 	&__logo
-		width: 500px
+		width: 160px
+		height: 40px
+		margin:
+			top: 25px 
 		background-image: url("../img/icons/logo-black.svg")
+		background-size: contain
 		background-repeat: no-repeat
 	&__menu
 		display: flex
-		
+		flex-wrap: wrap
 		list-style: none
-	&__element 
+		width: 600px
+		margin: 
+			top: 34px
+		padding: 
+			left: 60px
+	&__element
+		transform: skew(-20deg)	
+		margin: 
+			right: 50px 
+		&:last-child
+			margin: 
+				right: 0
 		a
-			background-color: yellow
+			border-radius: 4px
+			font-size: 12px
+			padding: 
+				top: 5px
+				bottom: 5px
+				left: 10px
+				right: 10px
+			background-color: #fff
 			text-decoration: none
 			color: #000000
+			transition: background-color 2s ease
+			span
+				display: inline-block
+				transform: skew(20deg)
+		a:hover, a:focus
+			color: #fff
+			background: linear-gradient(to right, #e01919 1%,#f25d33 52%,#e01a19 100%)
 
 .slider
-	background-color: blue
+	position: relative
 	min-height: 415px
-	padding: 
-		top: 30px
 	&__title
 		font-size: 60px
 		font-weight: 900
 		width: 700px
 		line-height: 1
-		margin: 
+		letter-spacing: -3px
+		padding: 
+			top: 50px
+		margin:
+			top: 0 
 			bottom: 15px
 	&__description
 		width: 400px
 		line-height: 1.2
+	&__item
+		padding: 
+			left: 230px
+		height: 415px
+		background-repeat: no-repeat, no-repeat
+		background-size: cover, cover
+		background-position: 0 0, center center 
+		color: #ffffff
+		&--first
+			background-image: linear-gradient(to right, rgba(0,0,0,0.6) 0%,rgba(125,185,232,0) 100%), url("../img/slider-1.jpg")
+		&--second
+			background-image: linear-gradient(to right, rgba(0,0,0,0.6) 0%,rgba(125,185,232,0) 100%), url("../img/slider-2.jpg")
+		&--third
+			background-image: linear-gradient(to right, rgba(0,0,0,0.6) 0%,rgba(125,185,232,0) 100%), url("../img/slider-3png.png")
+		&--four
+			background-image: linear-gradient(to right, rgba(0,0,0,0.6) 0%,rgba(125,185,232,0) 100%), url("../img/slider-4.jpg")
+
+.owl-dots
+	position: absolute
+	display: flex
+	bottom: 20px
+	left: calc(50% - 48px)
+
+	.owl-dot
+		margin: 
+			right: 20px
+		span
+			display: block
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			background-color: #12e9ed
+	.owl-dot.active
+		span
+			background-color: #ffffff
 
 .services
 	padding: 
-		top: 5px
+		top: 12px
 	.container
 		padding: 
-			left: 45px
+			left: 25px
 	&__title
 		position: relative
 		text-transform: uppercase
@@ -157,23 +223,63 @@ body
 			width: 70px
 			height: 4px
 			background-color: red
-	&__photo
-		width: 150px
-		height: 225px
-		background-color: green
-		transform: skewX(-5deg)
+	&__wrapper
+		height: 220px
+		width: 165px
+		position: relative
 		border-radius: 10px
+		transform: skewX(-5deg)
+		overflow: hidden
 		margin: 
 			bottom: 25px
 			left: 10px
+	&__photo
+		position: absolute
+		z-index: -1
+		left: -20px
+		bottom: 0
+		width: 205px
+		height: 250px
+		background-color: green
+		transform: skewX(5deg)
+		&::before
+			content: ''
+			z-index: -2
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 250px
+			background-color: rgba(0, 0, 0, 0.3)
+		
+	&__item:nth-child(1)
+		.services__photo
+			background-image: url("../img/services-1.png") 
+			background-size: cover
+			background-repeat: no-repeat
+	&__item:nth-child(2)
+		.services__photo
+			background-image: url("../img/services-2.png") 
+			background-size: cover
+			background-repeat: no-repeat
+	&__item:nth-child(3)
+		.services__photo
+			background-image: url("../img/services-3.png") 
+			background-size: cover
+			background-repeat: no-repeat
+	&__item:nth-child(4)
+		.services__photo
+			background-image: url("../img/services-4.png") 
+			background-size: cover
+			background-repeat: no-repeat
 	&__name
 		color: #fff
+		width: 110px
 		font-weight: 900
 		padding: 
-			top: 90px
-			left: 22px
+			top: 120px
+			left: 42px
 		line-height: 1
-		transform: skewX(5deg)
 		margin: 
 			top: 0
 	&__list
@@ -181,7 +287,7 @@ body
 		display: flex
 		justify-content: flex-start
 		padding: 
-			left: 115px
+			left: 120px
 	&__description
 		width: 140px
 		font-size: 8px
@@ -189,23 +295,29 @@ body
 			top: 0
 	&__item
 		margin: 
-			right: 25px
+			right: 5px
 
 .projects
-	position: relative
 	padding: 
 		top: 12px
+		bottom: 78px
+	.container
+		padding: 
+			left: 30px
 	&__list
-		display: table
+		position: relative
 		list-style: none
+		min-height: 402px
 		padding: 
 			left: 0
+		margin: 
+			left: 25px
 	&__title
 		position: relative
 		text-transform: uppercase
 		font-weight: 900
 		font-size: 17px
-		width: 300px
+		width: 340px
 		word-wrap: break-word
 		margin: 
 			top: 0
@@ -217,21 +329,45 @@ body
 			content: ''
 			position: absolute
 			bottom: -4px
-			margin: 
-				left: auto
-				right: auto
 			width: 82px
 			height: 4px
 			background-color: red
 	&__item
-		display: table-cell
-		vertical-align: middle
+		color: #fff
+		cursor: pointer
+		position: absolute
+		display: flex
 		padding: 
 			left: 30px
+		&::before
+			opacity: 0
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(0, 0, 0, 0.3)
+			transition: all 0.8s ease
+		&:hover
+			.projects__wrapper
+				opacity: 1
+		&:hover:before
+			opacity: 1
+			
+	&__wrapper
+		z-index: 100
+		opacity: 0
+		margin: 
+			top: auto
+			bottom: auto
+		transition: all 0.8s ease
+		
+		
 	&__name
 		font-weight: 900
 		font-size: 27px
-		width: 200px
+		width: 222px
 		line-height: 1.1
 		margin: 
 			top: 5px
@@ -243,14 +379,481 @@ body
 		font-size: 8px
 		width: 200px
 	&__item:nth-child(1)	
-		// background-color: lightblue
-		width: 264px
+		background-image: url("../img/projects-1.png")
+		background-size: cover
+		background-repeat: no-repeat
+		width: 266px
 		height: 402px
+		top: 0
+		left: 0
 	&__item:nth-child(2)	
-			background-color: lightgreen
-			width: 260px
-			height: 255px
+		background-image: url("../img/projects-2.png")
+		background-size: cover
+		background-repeat: no-repeat
+		width: 260px
+		height: 260px
+		top: 0
+		left: 264px
 	&__item:nth-child(3)	
-		background-color: lightyellow
+		background-image: url("../img/projects-3.png")
+		background-size: cover
+		background-repeat: no-repeat
+		width: 388px
+		height: 260px
+		top: 0
+		left: 524px
 	&__item:nth-child(4)	
-		background-color: lightgrey
+		background-image: url("../img/projects-4.png")
+		background-size: cover
+		background-repeat: no-repeat
+		width: 460px
+		height: 142px
+		top: 260px
+		left: 264px
+	&__item:nth-child(5)
+		background-image: url("../img/projects-5.png")
+		background-size: cover
+		background-repeat: no-repeat
+		width: 188px
+		height: 142px
+		left: 724px
+		top: 260px
+		.projects__name
+			width: 150px
+		.projects__description
+			width: 150px
+
+.mainfooter
+	background: linear-gradient(to right, #e31e24 1%,#f24e22 52%,#e31e24 100%)
+	color: #fff
+	padding: 
+		bottom: 19px
+	&__conf
+		color: #ffffff
+		position: relative
+		width: 1080px
+		font-size: 11px
+		margin: 
+			top: 32px
+			bottom: 0
+			left: auto
+			right: auto
+		padding: 
+			top: 16px
+		text-align: center
+		&::before
+			position: absolute
+			content: ''
+			height: 2px
+			width: 100%
+			background-color: #fff
+			top: 0
+			left: 0
+	.contacts
+		display: flex
+		justify-content: space-between
+		padding: 
+			top: 53px
+		margin: 
+			top: 0
+		list-style: none
+		padding: 
+			left: 5px
+		&__item--data
+			margin: 
+				top: 15px
+		&__phone
+			font-weight: 900
+			font-size: 45px
+			word-spacing: 6px
+		&__description
+			font-size: 20px
+			width: 320px
+			margin: 
+				top: 10px
+			line-height: 1.7
+	.form
+		display: flex
+		flex-direction: column
+		margin: 
+			right: 50px
+			top: 9px
+		&__name, &__mail, &__textarea 
+			width: 331px
+			border-radius: 5px
+			font-family: inherit
+			padding: 
+				top: 6px
+				bottom: 6px
+				left: 10px
+				right: 10px
+			font-style: italic
+			font-size: 12px
+			margin: 
+				bottom: 10px
+		input, textarea	
+			border: none
+		&__textarea
+			height: 86px
+			margin: 
+				bottom: 23px
+		&__button
+			color: #E31E24
+			cursor: pointer
+			background-color: #fff
+			width: 330px
+			word-wrap: break-word
+			border-radius: 9px
+			font-weight: 900
+			font-size: 18px
+			text-transform: uppercase
+			padding: 
+				top: 8px
+				bottom: 8px
+				left: 10px
+				right: 10px
+	.nav
+		display: flex
+		justify-content: space-between
+		&__list
+			list-style: none
+			margin:
+				right: 50px 
+				top: 4px
+				bottom: 0
+			padding: 
+				left: 0
+			text-align: right
+		&__item
+			margin: 
+				top: -3px
+			a
+				font-size: 10px
+				color: #fff
+			a:hover, a:focus
+				text-decoration: none
+		&__logo
+			width: 200px
+			height: 49px
+			margin: 
+				top: 30px
+			background-image: url("../img/icons/logo-white.svg")
+			background-repeat: no-repeat
+			background-size: contain
+
+////////////////////////////////////
+// About page                     //
+////////////////////////////////////
+
+
+.about
+	background-image: url("../img/about/bridge.png")
+	background-repeat: no-repeat
+	background-size: cover
+	color: #2b2a29
+	padding: 
+		top: 60px
+		left: 220px
+		bottom: 100px
+	&__title
+		font-weight: 900
+		text-transform: uppercase
+		font-size: 40px
+		width: 280px
+		line-height: 1
+		margin: 
+			bottom: 0
+	&__description
+		font-size: 14px
+		width: 500px
+
+.sphere
+	background-image: url("../img/about/station.png")
+	background-repeat: no-repeat
+	background-size: cover
+	padding: 
+		top: 36px
+		bottom: 50px
+	min-height: 410px
+	&__title
+		color: #2b2a29
+		font-size: 16px
+		width: 450px
+		text-align: center
+		margin: 
+			top: 0
+			left: auto
+			right: auto
+			bottom: 50px
+		text-transform: uppercase
+		font-weight: normal
+	&__wrapper
+		display: flex
+		margin: 
+			left: 400px
+	.transport
+		&__title
+			color: #e31e24
+			display: block
+			font-size: 17px
+			line-height: 1.2
+			text-transform: uppercase
+			font-weight: 900
+			width: 170px
+			margin: 
+				bottom: 10px
+		&__bridges
+			position: relative
+			margin: 
+				top: 0
+			&::before
+				content: ''
+				position: absolute
+				height: 30px
+				width: 2px
+				left: 20px
+				bottom: -34px
+				background-color: #e31e24
+			
+	.energetic
+		text-align: right
+		margin: 
+			top: 20px
+			left: 255px
+		&__title
+			color: #e31e24
+			display: block
+			font-size: 17px
+			line-height: 1.2
+			text-transform: uppercase
+			font-weight: 900
+			margin: 
+				bottom: 10px
+		&__generation
+			position: relative
+			margin: 
+				top: 0
+			&::before
+				content: ''
+				position: absolute
+				height: 2px
+				width: 205px
+				background-color: #e31e24
+				top: 10px
+				right: -213px
+		&__biogaz
+			position: relative
+			line-height: 1
+			text-align: right 
+			margin: 
+				top: 0
+				left: auto
+			width: 90px
+			&::before
+				content: ''
+				position: absolute
+				background-color: #e31e24
+				width: 20px
+				height: 2px
+				left: -10px
+				top: 20px
+
+			&::after
+				content: ''
+				position: absolute
+				background-color: #e31e24
+				width: 2px
+				height: 70px
+				left: -10px
+				top: 20px
+	
+.advantages
+	color: #2b2a29
+	background-color: #D9DADA
+	padding: 
+		top: 30px
+		bottom: 25px
+	&__title
+		width: 250px
+		text-align: center
+		margin: 
+			top: 0
+			left: auto
+			right: auto
+			bottom: 37px
+		font-weight: 700
+		text-transform: uppercase
+	&__list
+		width: 700px
+		display: flex
+		margin: 
+			left: auto
+			right: auto
+		padding: 
+			left: 10px
+		list-style: none
+	&__photo
+		width: 120px
+		height: 120px
+		margin: 
+			left: auto
+			right: auto
+		background-repeat: no-repeat
+		background-size: contain
+		&--first
+			background-image: url("../img/about/advantages-1.png")
+		&--second
+			background-image: url("../img/about/advantages-2.png")
+		&--third
+			background-image: url("../img/about/advantages-3.png")
+		&--four
+			background-image: url("../img/about/advantages-4.png")
+	&__description
+		width: 150px
+		font-size: 12px
+		line-height: 1
+		text-align: center
+	&__element
+		margin: 
+			right: 26px
+.friends
+	color: #2B2A29
+	padding: 
+		top: 30px
+		bottom: 45px
+	&__list	
+		width: 820px
+		margin: 
+			left: auto
+			right: auto
+		display: flex
+		justify-content: space-between
+		list-style: none
+		padding: 
+			left: 0
+	.line
+		width: 1px
+		height: 180px
+		background-color: #b2b2b2
+		margin: 
+			top: 20px
+	.partners
+		&__title
+			font-weight: 900
+			margin: 
+				top: 0
+				bottom: 8px
+		&__list
+			position: relative
+			padding: 
+				left: 0
+			list-style: none
+			width: 310px
+			height: 180px
+		&__element
+			position: absolute
+			background-repeat: no-repeat
+			background-size: cover
+		&__element:nth-child(1)
+			top: 0
+			left: 0
+			width: 70px
+			height: 63px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(2)
+			top: 0
+			left: 75px
+			width: 115px
+			height: 63px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(3)
+			top: 0
+			left: 196px
+			width: 115px
+			height: 135px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(4)
+			top: 70px
+			left: 0
+			width: 120px
+			height: 65px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(5)
+			top: 70px
+			left: 125px
+			width: 65px
+			height: 65px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(6)
+			top: 140px
+			left: 0
+			width: 190px
+			height: 40px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(7)
+			top: 140px
+			left: 197px
+			width: 115px
+			height: 40px
+			background-image: url("../img/about/unknow.png")
+
+	.clients
+		&__title
+			text-align: right
+			font-weight: 900
+			margin: 
+				top: 0
+				bottom: 8px
+		&__list
+			position: relative
+			padding: 
+				left: 0
+			list-style: none
+			width: 310px
+			height: 180px
+		&__element
+			position: absolute
+		&__element:nth-child(1)
+			top: 0
+			left: 0
+			width: 115px
+			height: 133px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(2)
+			top: 0
+			left: 122px
+			width: 115px
+			height: 63px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(3)
+			top: 0
+			left: 245px
+			width: 65px
+			height: 63px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(4)
+			top: 70px
+			left: 122px
+			width: 65px
+			height: 63px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(5)
+			top: 70px
+			left: 192px
+			width: 118px
+			height: 63px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(6)
+			top: 140px
+			left: 0
+			width: 116px
+			height: 38px
+			background-image: url("../img/about/unknow.png")
+		&__element:nth-child(7)
+			top: 140px
+			left: 120px
+			width: 190px
+			height: 38px
+			background-image: url("../img/about/unknow.png")
+		
+

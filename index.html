@@ -6,105 +6,139 @@
     <meta name="description" content="">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
-
-    <meta property="og:image" content="path/to/image.jpg">
-    <link rel="icon" href="img/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 
     <meta name="theme-color" content="#000">
 
 
     <!-- ================= Стили ================= -->
-    <link rel="stylesheet" href="css/style.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
+
   </head>
   <body>
-	<div class="back"></div>
 	<header class="main-header">
 		<div class="container">
-			<div class="main-header__logo"></div>
+			<a href="index.html"><div class="main-header__logo"></div></a> 
 			<ul class="main-header__menu">
-				<li class="main-header__element"><a href="#">О компании</a></li>
-				<li class="main-header__element"><a href="#">Услуги</a></li>
-				<li class="main-header__element"><a href="#">Сфера деятельности</a></li>
-				<li class="main-header__element"><a href="#">Контакты</a></li>
+				<li class="main-header__element"><a href="about.html"><span>О компании</span></a></li>
+				<li class="main-header__element"><a href="#"><span>Услуги</span></a></li>
+				<li class="main-header__element"><a href="#"><span>Сфера деятельности</span></a></li>
+				<li class="main-header__element"><a href="#"><span>Контакты</span></a></li>
 			</ul>
 		</div>
 	</header>
-	<section class="slider">
-		<div class="container">
-			<div class="slider__item">
-				<h1 class="slider__title">Современные технологии<br> и многолетний опыт</h1>
-				<p class="slider__description">Организация работ на строительной площадке, обеспечение плановых сроков строительства, оптимизация затрат на реализацию проекта.</p>
+	<section class="slider owl-carousel">
+			<div class="slider__item slider__item--first">
+				<div>
+					<h1 class="slider__title">Проектирование</h1>
+					<p class="slider__description">Современные технологии и многолетний опыт</p>
+				</div>
 			</div>
-		</div>
+			<div class="slider__item slider__item--second">
+				<div>
+					<h1 class="slider__title">Поставка оборудования</h1>
+					<p class="slider__description">Оптимальные решения в короткие сроки</p>
+				</div>
+			</div>
+			<div class="slider__item slider__item--third">
+				<div>
+					<h1 class="slider__title">Управление проектами</h1>
+					<p class="slider__description">Организация, сопровождение, реализация</p>
+				</div>
+			</div>
+			<div class="slider__item slider__item--four">
+				<div>
+					<h1 class="slider__title">Строительство</h1>
+					<p class="slider__description">Эффективность и соответствие требованиям</p>
+				</div>
+			</div>
 	</section>
 	<section class="services">
-		<div class="container">
+		
 			<h2 class="services__title">Услуги</h2>
+			<div class="container">
 			<ul class="services__list">
 				<li class="services__item">
-					<div class="services__photo">
-						<h3 class="services__name">Название услуги</h3>
+					<div class="services__wrapper">
+						<div class="services__photo">
+							<h3 class="services__name">Название услуги</h3>
+						</div>
 					</div>	
 					<p class="services__description">Здесь будет размещаться описание об услуге под названием "Проектирование объектов". Вся необходимая информация, которая касается прямо или косвенно эту услугу.</p>
 				</li>
 				<li class="services__item">
-					<div class="services__photo">
-						<h3 class="services__name">Название услуги</h3>
+					<div class="services__wrapper">
+						<div class="services__photo">
+							<h3 class="services__name">Название услуги</h3>
+						</div>
 					</div>				
 					<p class="services__description">Здесь будет размещаться описание об услуге под названием "Проектирование объектов". Вся необходимая информация, которая касается прямо или косвенно эту услугу.</p>
 				</li>
 				<li class="services__item">
-					<div class="services__photo">
-						<h3 class="services__name">Название услуги</h3>
+					<div class="services__wrapper">
+						<div class="services__photo">
+							<h3 class="services__name">Название услуги</h3>
+						</div>
 					</div>
 					<p class="services__description">Здесь будет размещаться описание об услуге под названием "Проектирование объектов". Вся необходимая информация, которая касается прямо или косвенно эту услугу.</p>
 				</li>
 				<li class="services__item">
-					<div class="services__photo">
-						<h3 class="services__name">Название услуги</h3>
+					<div class="services__wrapper">
+						<div class="services__photo">
+							<h3 class="services__name">Название услуги</h3>
+						</div>
 					</div>
 					<p class="services__description">Здесь будет размещаться описание об услуге под названием "Проектирование объектов". Вся необходимая информация, которая касается прямо или косвенно эту услугу.</p>
 				</li>
 			</ul>
 		</div>
 	</section>
-	<section class="projects">
-		<div class="container">
+	<section class="projects">		
 			<h2 class="projects__title">Проекты</h2>
+			<div class="container">
 			<ul class="projects__list">
 				<li class="projects__item">
-					<h3 class="projects__name">Sixth Crossing в Дубаях</h3>
-					<p class="projects__description">Проект моста спроектировани с использованием шестиполосного движения автотранспорта в каждую сторону, но это еще не все - в центре моста пройдет линия надземного метро, а пешеходные зоны будут распологаться под проезжей частью, защищая пешеходов от солнца и других погодных явлений. </p>
+					<div class="projects__wrapper">
+						<h3 class="projects__name">Sixth Crossing в Дубаях</h3>
+						<p class="projects__description">Проект моста спроектировани с использованием шестиполосного движения автотранспорта в каждую сторону, но это еще не все - в центре моста пройдет линия надземного метро, а пешеходные зоны будут распологаться под проезжей частью, защищая пешеходов от солнца и других погодных явлений. </p>
+					</div>
+					
 				</li>
 				<li class="projects__item">
-					<h3 class="projects__name">Пример текста</h3>
-					<p class="projects__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam neque est iure ipsum possimus voluptates ipsa? Debitis eligendi sapiente aliquam fugit voluptatem est, perferendis incidunt dolor corrupti itaque cumque expedita!</p>
+					<div class="projects__wrapper">
+						<h3 class="projects__name">Пример текста</h3>
+						<p class="projects__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam neque est iure ipsum possimus voluptates ipsa? Debitis eligendi sapiente aliquam fugit voluptatem est, perferendis incidunt dolor corrupti itaque cumque expedita!</p>
+					</div>			
 				</li>
-				<!-- <li class="projects__item">
-					<h3 class="projects__name">Небесный мост в Китае</h3>
-					<p class="projects__description">Местанахождение этого сказочного и невероятно высокого моста распологается в Китае, а именно в провинции Аньхой. ОН по праву считается как природное, культурное и мировое наследие всех человеческих рас на Земле, причем не тольео одних лишь китайцев.</p>
+				 <li class="projects__item">
+						<div class="projects__wrapper">
+							<h3 class="projects__name">Небесный мост в Китае</h3>
+							<p class="projects__description">Местанахождение этого сказочного и невероятно высокого моста распологается в Китае, а именно в провинции Аньхой. ОН по праву считается как природное, культурное и мировое наследие всех человеческих рас на Земле, причем не тольео одних лишь китайцев.</p>
+						</div>
 				</li>
+				
 				<li class="projects__item">
-					<h3 class="projects__name">Пример текста</h3>
-					<p class="projects__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum et maiores, aut eaque sequi unde, magni quos temporibus aperiam repudiandae doloribus! Dolorem repellat eum eius! Illo laborum amet dolorum ex!</p>
-				</li>
+					<div class="projects__wrapper">
+						<h3 class="projects__name">Пример текста</h3>
+						<p class="projects__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum et maiores, aut eaque sequi unde, magni quos temporibus aperiam repudiandae doloribus! Dolorem repellat eum eius! Illo laborum amet dolorum ex!</p>
+					</div>	
+				</li>		
 				<li class="projects__item">
-					<h3 class="projects__name">Пример текста</h3>
-					<p class="projects__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum et maiores, aut eaque sequi unde, magni quos temporibus aperiam repudiandae doloribus! Dolorem repellat eum eius! Illo laborum amet dolorum ex!</p>
-				</li> -->
+					<div class="projects__wrapper">
+						<h3 class="projects__name">Пример текста</h3>
+						<p class="projects__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum et maiores, aut eaque sequi unde, magni quos temporibus aperiam repudiandae doloribus! </p>
+					</div>
+				</li> 
 			</ul>
 		</div>
 	</section>
 	<footer class="mainfooter">
 		<div class="container">
 			<ul class="mainfooter__contacts contacts">
-				<li class="contacts__item">
+				<li class="contacts__item contacts__item--data">
 					<b class="contacts__phone">8 800 892 15 47</b>
 					<p class="contacts__description">
 						Инжинеринговая компания
-						"Global Ingineering"
+						«Global Ingineering»<br>
 						Казахстан, г.Алматы, 050000,
 						ул.Абая Ауэзова, 14, корпус А.
 						mail@mail.ru
@@ -114,22 +148,23 @@
 					<form action="POST" class="contacts__form form">
 						<input type="text" class="form__name" placeholder="Ф.И.О">
 						<input type="text" class="form__mail" placeholder="e-mail">
-						<textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
-						<input type="submit" value="Отправить">
+						<textarea name="" id="" cols="30" rows="4" class="form__textarea" placeholder="Сообщение"></textarea>
+						<input type="submit"  class="form__button" value="Отправить">
 					</form>
 				</li>
 			</ul>	
 			<div class="mainfooter__nav nav">
 				<div class="nav__logo"></div>
 				<ul class="nav__list">
-					<li class="nav__item">О компании</li>
-					<li class="nav__item">Услуги</li>
-					<li class="nav__item">Сфера деятельности</li>
-					<li class="nav__item">Поставка оборудования</li>
-					<li class="nav__item">Проекты Контакты</li>
+					<li class="nav__item"><a href="about.html">О компании</a></li>
+					<li class="nav__item"><a href="#">Услуги</a></li>
+					<li class="nav__item"><a href="#">Сфера деятельности</a></li>
+					<li class="nav__item"><a href="#">Поставка оборудования</a></li>
+					<li class="nav__item"><a href="#">Проекты Контакты</a></li>
 				</ul>
 			</div>
 		</div>
+		<p class="mainfooter__conf">Политика конфиденциальности</p>
 	</footer>
   <script src="js/script.min.js" ></script>
   </body>
