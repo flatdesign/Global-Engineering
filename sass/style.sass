@@ -74,16 +74,16 @@ body
 	background-color: #fff
 	margin: 0
 
-// .back
-// 	position: absolute
-// 	width: 100%
-// 	height: 5000px
-// 	opacity: 0.3	
-// 	top: 0
-// 	left: 0
-// 	background-image: url("../img/2.png")
-// 	background-repeat: no-repeat
-// 	background-size: contain
+.back
+	position: absolute
+	width: 100%
+	height: 5000px
+	opacity: 0.3	
+	top: 0
+	left: 0
+	background-image: url("../img/3.png")
+	background-repeat: no-repeat
+	background-size: contain
 
 .container
 	width: 1000px
@@ -108,40 +108,79 @@ body
 		background-image: url("../img/icons/logo-black.svg")
 		background-size: contain
 		background-repeat: no-repeat
+
 	&__menu
-		display: flex
-		flex-wrap: wrap
-		list-style: none
-		width: 600px
-		margin: 
-			top: 34px
 		padding: 
-			left: 60px
-	&__element
-		transform: skew(-20deg)	
-		margin: 
-			right: 50px 
-		&:last-child
-			margin: 
-				right: 0
-		a
-			border-radius: 4px
-			font-size: 12px
+			top: 12px
+		list-style: none
+		padding: 
+			left: 0
+		display: flex
+		width: 550px
+		justify-content: space-between
+		.submenu
+			list-style: none
 			padding: 
-				top: 5px
-				bottom: 5px
-				left: 10px
-				right: 10px
-			background-color: #fff
-			text-decoration: none
-			color: #000000
-			transition: background-color 2s ease
-			span
+				left: 0
+			position: absolute
+			left: 50%
+			top: 105%
+			width: 182px
+			margin-left: -91px
+			z-index: 10
+			visibility: hidden
+			opacity: 0
+			transform: scale(.8)
+			transition: .4s ease-in-out
+			display: flex
+			flex-direction: column
+			li
+				margin: 
+					bottom: 5px
+				font-size: 8px
+				text-align: center
+				transform: skewX(-20deg) 
 				display: inline-block
-				transform: skew(20deg)
-		a:hover, a:focus
-			color: #fff
-			background: linear-gradient(to right, #e01919 1%,#f25d33 52%,#e01a19 100%)
+				background: grey
+				border-radius: 5px
+				background: linear-gradient(to right, #ececec 1%,#fdfdfd 52%,#ececec 100%) 
+				span
+					padding: 6px 16px
+					display: inline-block
+					transform: skewX(20deg) 
+				a
+					color: #2b2a29
+					text-decoration: none
+
+	&__element
+		position: relative
+		&:hover
+			.ss
+				background: linear-gradient(to right, #e31e24 1%,#f24e22 52%,#e31e24 100%)  
+			.submenu
+				visibility: visible
+				opacity: 1
+				transform: scale(1)
+				
+	&__link
+		display: inline-block
+		text-decoration: none
+		color: #2b2a29
+		span
+			padding: 6px 16px
+			display: inline-block
+			transform: skewX(20deg) 	
+		&:hover
+			color: #ffffff 
+	.ss
+		border-radius: 5px
+		display: inline-block
+		transform: skewX(-20deg)
+
+	 
+		
+	
+	
 
 .slider
 	position: relative
@@ -289,13 +328,13 @@ body
 		padding: 
 			left: 120px
 	&__description
-		width: 140px
-		font-size: 8px
+		width: 180px
+		font-size: 12px
 		margin: 
 			top: 0
 	&__item
 		margin: 
-			right: 5px
+			right: 10px
 
 .projects
 	padding: 
@@ -376,8 +415,10 @@ body
 		margin: 
 			top: 0
 			bottom: 0
-		font-size: 8px
-		width: 200px
+		font-size: 12px
+		width: 100%
+		padding: 
+			right: 20px
 	&__item:nth-child(1)	
 		background-image: url("../img/projects-1.png")
 		background-size: cover
@@ -855,5 +896,66 @@ body
 			width: 190px
 			height: 38px
 			background-image: url("../img/about/unknow.png")
-		
+
+
+///////////////////////////////////////////
+transport                              	//
+/////////////////////////////////////////
+
+.transport
+	display: flex
+	justify-content: space-between
+	width: 900px
+	margin:
+		left: auto
+		right: auto 
+
+	padding: 
+		top: 65px
+		bottom: 40px
+	&__title
+		color: #2b2a29
+		font-weight: 900
+		text-transform: uppercase
+		font-size: 35px
+		width: 280px
+		line-height: 1
+		margin: 
+			top: 0
+			bottom: 7px
+	&__description
+		font-size: 14px
+		width: 400px
+		margin: 
+			top: 0
+			bottom: 35px
+	&__button
+		display: inline-block
+		text-align: center
+		padding: 
+			left: 45px
+			right: 45px
+			top: 10px
+			bottom: 10px
+		margin: 
+			bottom: 20px
+		font-weight: 900
+		text-decoration: none
+		font-size: 14px
+		line-height: 1
+		width: 250px
+		border-radius: 5px
+		color: #5b5b5b
+		background-color: #c5c6c6
+
+.right-column
+	margin: 
+		top: 7px
+	width: 325px
+	height: 250px
+	background-image: url("../img/object.png")
+
+.left-column
+	margin: 
+		left: 35px
 
