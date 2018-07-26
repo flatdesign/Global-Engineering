@@ -81,7 +81,7 @@ body
 	opacity: 0.3	
 	top: 0
 	left: 0
-	background-image: url("../img/3.png")
+	background-image: url("../img/5.png")
 	background-repeat: no-repeat
 	background-size: contain
 
@@ -472,7 +472,6 @@ body
 	&__conf
 		color: #ffffff
 		position: relative
-		width: 1080px
 		font-size: 11px
 		margin: 
 			top: 32px
@@ -632,7 +631,7 @@ body
 		display: flex
 		margin: 
 			left: 400px
-	.transport
+	.transports
 		&__title
 			color: #e31e24
 			display: block
@@ -656,7 +655,7 @@ body
 				bottom: -34px
 				background-color: #e31e24
 			
-	.energetic
+	.energetics
 		text-align: right
 		margin: 
 			top: 20px
@@ -903,16 +902,17 @@ transport                              	//
 /////////////////////////////////////////
 
 .transport
-	display: flex
-	justify-content: space-between
-	width: 900px
-	margin:
-		left: auto
-		right: auto 
-
-	padding: 
-		top: 65px
-		bottom: 40px
+	background-color: #ebecec
+	&__wrapper
+		justify-content: space-between
+		display: flex
+		width: 900px
+		margin:
+			left: auto
+			right: auto 
+		padding: 
+			top: 65px
+			bottom: 40px
 	&__title
 		color: #2b2a29
 		font-weight: 900
@@ -924,6 +924,7 @@ transport                              	//
 			top: 0
 			bottom: 7px
 	&__description
+		color: #2b2a29
 		font-size: 14px
 		width: 400px
 		margin: 
@@ -959,3 +960,188 @@ transport                              	//
 	margin: 
 		left: 35px
 
+
+///////////////////////////////////////////
+Energetic                              	 //
+///////////////////////////////////////////
+
+.energetic
+	background-color: #ebecec
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		width: 900px
+		margin:
+			left: auto
+			right: auto 
+		padding: 
+			top: 65px
+			bottom: 40px
+	&__title
+		color: #2b2a29
+		font-weight: 900
+		text-transform: uppercase
+		font-size: 35px
+		width: 280px
+		line-height: 1
+		margin: 
+			top: 0
+			bottom: 16px
+	&__description
+		color: #2b2a29
+		font-size: 11px
+		line-height: 1.3
+		width: 410px
+		margin: 
+			top: 0
+			bottom: 10px
+	&__button
+		display: inline-block
+		text-align: center
+		padding: 
+			left: 45px
+			right: 45px
+			top: 10px
+			bottom: 10px
+		margin: 
+			bottom: 20px
+		font-weight: 900
+		text-decoration: none
+		font-size: 14px
+		line-height: 1
+		width: 250px
+		border-radius: 5px
+		color: #5b5b5b
+		background-color: #c5c6c6
+	&__right-column
+		margin: 
+			top: 7px
+		width: 325px
+		height: 250px
+		background-image: url("../img/object.png")
+	&__gaz
+		color: #2b2a29
+		width: 460px
+		display: block
+		font-size: 11px
+		font-weight: 900
+		margin: 
+			bottom: 40px
+
+	&__left-column
+		margin: 
+			left: 35px
+
+
+			 
+
+/////////////////////////////
+Contacts					     	//
+/////////////////////////////
+
+
+.feedback
+	background-color: #ebecec 
+	background-image: url("../img/map-background.png")
+	background-position: center center
+	background-repeat: no-repeat
+	padding: 
+		top: 60px
+		bottom: 55px
+	&__form
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		width: 580px
+		margin: 
+			left: auto
+			right: auto
+			bottom: 35px
+	&__information
+		display: flex
+		flex-direction: column
+	&__title
+		font-size: 19px
+		text-align: center
+		margin: 
+			top: 0
+			bottom: 43px
+	&__name, &__mail, &__textarea 
+			width: 287px
+			border-radius: 5px
+			font-family: inherit
+			padding: 
+				top: 8px
+				bottom: 8px
+				left: 10px
+				right: 10px
+			font-style: italic
+			font-size: 10px
+			background-color: #fff
+	&__name
+		margin: 
+			bottom: 14px
+	input, textarea	
+		border: none
+		background-color: fff
+	&__textarea
+		height: 72px
+		margin: 
+			bottom: 10px
+	&__button
+		color: #E31E24
+		cursor: pointer
+		background-color: #fff
+		width: 285px
+		word-wrap: break-word
+		border-radius: 9px
+		font-weight: 900
+		font-size: 16px
+		text-transform: uppercase
+		padding: 
+			top: 8px
+			bottom: 8px
+			left: 10px
+			right: 10px
+		margin: 
+			left: auto
+	
+	&__contacts
+		font-size: 14px
+		padding: 
+			left: 10px
+		list-style: none
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		width: 580px
+		margin: 
+			left: auto
+			right: auto
+	&__elemnt
+		padding: 
+			left: 30px
+		margin: 
+			right: 32px
+		background-repeat: no-repeat
+		&:last-child
+			margin: 
+				right: 0
+		&--map
+			width: 240px
+			background-image: url("../img/icons/map.png")
+			background-size: 17px auto
+			background-position: 5px center
+		&--mail
+			background-image: url("../img/icons/message.png")
+			background-size: 21px auto
+			background-position: 3px center
+		&--phone
+			background-image: url("../img/icons/phone.png")
+			background-size: 13px auto
+			background-position: 13px center
+
+
+.mainfooter--contacts
+	padding: 
+		top: 20px
