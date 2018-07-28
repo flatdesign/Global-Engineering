@@ -91,7 +91,7 @@ gulp.task('script', function () {
   	"js/script.js" // всегда в конце
   	])
   .pipe(concat("script.min.js"))
-//  .pipe(uglify())									// минификация в конце проекта
+  .pipe(uglify())									// минификация в конце проекта
  	.pipe(gulp.dest('build/js/'))
  	.pipe(server.stream());
 });

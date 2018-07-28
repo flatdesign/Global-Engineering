@@ -55,7 +55,7 @@ $(function () {
 
 	$(document).on('scroll', function() {
 		var top = $(this).scrollTop();
-		if(top > 100) {
+		if(top > 1) {
 			menu.addClass('fixed')
 			slider.addClass('fixed')
 		}	
@@ -73,6 +73,24 @@ $(function () {
 		$('html, body').animate({
 			scrollTop: h.offset().top - 150
 		}, 300);
+	});
+
+
+	//Отправка формы
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "../mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Thank you!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
 	});
 	
 });

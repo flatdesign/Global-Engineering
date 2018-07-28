@@ -18,6 +18,7 @@
 									</div>
 									
 								</li>
+						
 						<li class="main-header__element">
 							<div class="ss">
 									<a class="main-header__link" href="about.html"><span>О компании</span></a>
@@ -25,13 +26,8 @@
 							
 						</li>
 						<li class="main-header__element">
-							<div class="ss">
-								<a class="main-header__link" href="#"><span>Услуги</span></a>
-							</div>
-						</li>
-						<li class="main-header__element">
 								<div class="ss">
-									<a class="main-header__link" href="#"><span>Сфера деятельности</span></a>
+									<a class="main-header__link" href="infrastructure.html"><span>Сфера деятельности</span></a>
 								</div>
 							<ul class="submenu">
 								<li><a href="infrastructure.html"><span>Дорожное и инфраструктурное строительство</span></a></li>
@@ -49,19 +45,26 @@
 
 			<section class="feedback">
 				<h2 class="feedback__title">Обратная связь</h2>
-				<form action="POST" class="feedback__form">
+				<form class="feedback__form">
+
+					<!-- Данные для отправки формы -->
+					<input type="hidden" name="project_name" value="Global Engennering">
+					<input type="hidden" name="admin_email" value="info@globalpv.kz">
+					<input type="hidden" name="form_subject" value="Новая заявка">
+
+
 					<div class="feedback__information">
-						<input type="text" placeholder="Ф.И.О" class="feedback__name">
-						<input type="text" placeholder="e-mail" class="feedback__mail">
+						<input type="text" placeholder="Ф.И.О" class="feedback__name" name="Ф.И.О">
+						<input type="text" placeholder="e-mail" class="feedback__mail" name="e-mail">
 					</div>
-					<textarea cols="30" rows="10" class="feedback__textarea" placeholder="Сообщение"></textarea>
+					<textarea cols="30" rows="10" class="feedback__textarea" placeholder="Сообщение" name="Сообщение"></textarea>
 					<input type="submit" value="Отправить" class="feedback__button">
 				</form>
 				<ul class="feedback__contacts">
-					<li class="feedback__elemnt feedback__elemnt--map">Казахстан, г.Алматы, 050000,
-							ул.Абая Ауэзова, 14,<br> корпус А.</li>
-					<li class="feedback__elemnt feedback__elemnt--mail">mail@mail.ru</li>
-					<li class="feedback__elemnt feedback__elemnt--phone">8 800 892 15 47</li>
+					<li class="feedback__elemnt feedback__elemnt--map">Казахстан, г. Экибастуз,<br> ул.
+						Дуйменбаева д.34, н.п.1</li>
+					<li class="feedback__elemnt feedback__elemnt--mail"> info@globalpv.kz</li>
+					<li class="feedback__elemnt feedback__elemnt--phone">+7 771 006 96 92</li>
 				</ul>
 			</section>
 
@@ -70,15 +73,15 @@
 						<div class="mainfooter__nav nav">
 							<div class="nav__logo"></div>
 							<ul class="nav__list">
+								<li class="nav__item"><a href="index.html">Главная</a></li>
 								<li class="nav__item"><a href="about.html">О компании</a></li>
-								<li class="nav__item"><a href="#">Услуги</a></li>
-								<li class="nav__item"><a href="#">Сфера деятельности</a></li>
-								<li class="nav__item"><a href="#">Поставка оборудования</a></li>
-								<li class="nav__item"><a href="contacts.html">Проекты Контакты</a></li>
+								<li class="nav__item"><a href="infrastructure.html">Сферы деятельности</a></li>
+								<li class="nav__item"><a href="contacts.html">Контакты</a></li>
 							</ul>
 						</div>
-					</div>
+					
 					<p class="mainfooter__conf">Политика конфиденциальности</p>
+				</div>
 				</footer>
 	
 </body>
