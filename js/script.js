@@ -72,7 +72,7 @@ $(function () {
 
 		$('html, body').animate({
 			scrollTop: h.offset().top - 150
-		}, 400);
+		}, 300);
 	});
 	
 });
