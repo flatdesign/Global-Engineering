@@ -57,23 +57,29 @@ $(function () {
 		var top = $(this).scrollTop();
 		if(top > 1) {
 			menu.addClass('fixed')
-			slider.addClass('fixed')
 		}	
 		else {
 			menu.removeClass('fixed')
-			slider.removeClass('fixed')
 		}		
 	})
 
-	$('a.scroll').on('click', function(e) {
-		e.preventDefault();
-		var selector = $(this).attr('href');
-		var h = $(selector);
+	$('.services__arrow').on('click', function(e) {
 
 		$('html, body').animate({
-			scrollTop: h.offset().top - 150
-		}, 300);
+			scrollTop: 600
+		}, 400);
 	});
+
+
+	// $('a.scroll').on('click', function(e) {
+	// 	e.preventDefault();
+	// 	var selector = $(this).attr('href');
+	// 	var h = $(selector);
+
+	// 	$('html, body').animate({
+	// 		scrollTop: h.offset().top - 150
+	// 	}, 300);
+	// });
 
 
 	//Отправка формы
@@ -92,6 +98,8 @@ $(function () {
 		});
 		return false;
 	});
+
+	
 	
 });
 
